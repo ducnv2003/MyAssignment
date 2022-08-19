@@ -1,0 +1,43 @@
+/* Mobile */
+@media only screen and (max-width:767px) {
+    .container {
+        width: 990px;
+        margin: auto;
+        display: block;
+        padding: 30px 50px;
+        display: flex;
+        flex-direction: column;
+    }
+    #banner {
+        margin: 0 auto;
+        padding: 50px 50px 200px 50px;
+        text-align: center;
+        color: white;
+        background-image: url(images/emyeu.jpg);
+        width: 990px;
+        height: 200px;
+    }
+    #nav-bar .container {
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+    }
+    #about .container, #job-info .container {
+        display: flex;
+        flex-direction: column;
+    }
+    #job-info{
+        display: flex;
+        flex-direction: column;
+    }
+    .bg-grey{
+        display: flex;
+        flex-direction: column;
+    }
+    .img2 img{
+        border: none;
+    }
+    .border{
+        border: none;
+    }
+}

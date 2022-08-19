@@ -1,0 +1,934 @@
+* {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.5;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+.bg-grey {
+    background: white;
+}
+
+section>.container {
+    width: 1170px;
+    margin: auto;
+    display: block;
+    padding: 30px 50px;
+}
+
+#banner {
+    padding: 50px 50px 200px 50px;
+    text-align: center;
+    color: white;
+    background-image: url(images/emyeu.jpg);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    margin: 0;
+}
+
+#nav-bar {
+    text-align: center;
+    border-bottom: 1px solid #d0d0d0;
+}
+
+#nav-bar .container {
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+#nav-bar a {
+    text-decoration: none;
+    color: black;
+    padding: 30px 10px;
+    border-left: 1px solid #d0d0d0;
+}
+
+#nav-bar a:nth-child(2) {
+    border-right: 1px solid #d0d0d0;
+}
+
+#nav-bar a:nth-child(5) {
+    border-right: 1px solid #d0d0d0;
+}
+
+#nav-bar i {
+    color: #199cdb;
+}
+
+.name {
+    display: flex;
+    flex-direction: column;
+    padding: 0px 50px;
+    justify-content: center;
+}
+
+.name h1 {
+    font-size: 1.5em;
+}
+
+.name p {
+    color: gray;
+    font-size: 0.75em;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#about .container,
+#job-info .container {
+    display: flex;
+}
+
+#target,
+#personal-info {
+    width: 50%;
+    padding: 30px 0px;
+}
+
+#target {
+    background-color: #f5f5f5;
+    padding: 30px 20px;
+}
+
+#target p {
+    margin: 16px 0;
+    line-height: 2;
+}
+
+#personal-info {
+    background-color: #f0f0f0;
+}
+
+#personal-info h1 {
+    padding: 0 50px;
+}
+
+.info li {
+    padding: 5px 0px;
+    list-style-type: none;
+}
+
+
+
+/*sử dụng display flex sắp xếp bố cục */
+
+.container1 ul {
+    width: 100%;
+    height: 100px;
+    background-color: rgb(190, 190, 189);
+    display: flex;
+
+}
+
+/*sử dụng flex basis 10% theo chiều rộng và ngang của nội dung */
+.container1 li {
+    list-style-type: none;
+    font-size: 12px;
+    color: gray;
+    flex-basis: 10%;
+    align-self: center;
+}
+
+.fb {
+    margin-left: 500px;
+}
+
+.container1 i {
+    color: aqua;
+    font-size: 25px;
+}
+
+/* justify item center căn giữa nội dung trong flexbox*/
+.container li {
+    list-style-type: none;
+    justify-items: center;
+
+
+}
+
+/*flex start item ở hướng bên trái , flex wrap các nội dung xuống dòng khi thu nhỏ trình duyệt ,
+ height fit-content chiều cao phù hợp với nội dung */
+.column {
+    width: calc(33.33% - 50px);
+    margin: 0px 10px;
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    height: fit-content;
+}
+
+.column-item {
+    width: 100%;
+    border: 1px solid #d0d0d0;
+    box-shadow: 1px 1px 5px #d0d0d0;
+    padding: 20px 0;
+    margin: 20px 0px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.column-item h1 {
+    width: 75%;
+    padding: 0 40px;
+}
+
+.column-item i {
+    width: 25%;
+    text-align: center;
+    font-size: 36px;
+    color: gray;
+}
+
+.time-line h5 {
+    font-style: italic;
+    font-weight: unset;
+    padding: 10px 0px;
+    color: gray;
+}
+
+.recent {
+    background-color: #199cdb;
+    color: white;
+    border-radius: 5px;
+    padding: 2px 10px;
+}
+
+.work-detail {
+    padding: 40px 20px 0px 40px;
+    width: 100%;
+}
+
+/* line-height khoảng cách các văn bản*/
+
+.work-content h5 {
+    line-height: 1.8;
+    font-weight: unset;
+    color: gray;
+}
+
+.name-work {
+    position: relative;
+}
+
+/*before thêm vào trước tạo hiệu ứng trc title*/
+.name-work::before {
+    position: absolute;
+    content: '';
+    width: 10px;
+    height: 10px;
+    background-color: #199cdb;
+    border-radius: 50%;
+    left: -20px;
+    top: 5px;
+}
+
+.column-item .hobby {
+    padding: 25px;
+    display: flex;
+}
+
+.hobby-content h5 {
+    line-height: 1.5;
+    font-size: 9px;
+    font-weight: unset;
+    color: gray;
+    margin-left: 32px
+}
+
+/*position relative đặt phần tử ở 1 vị trí và không gian xung quanh sẽ giữ nguyên*/
+
+.hobby {
+    border: 1px solid rgb(54, 236, 245);
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    align-items: center;
+    text-align: center;
+    margin-left: 23px;
+    position: relative;
+
+}
+
+/*position absolute giúp định vị trí tuyệt đối cho thành phần  nằm trong*/
+.my_icon {
+
+    top: 50%;
+    left: 40%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+
+    margin-left: -8px;
+
+}
+
+.column-item .icon {
+    color: aqua;
+    font-size: 25px;
+}
+
+.row-hobby {
+    margin-top: 20px;
+    flex-direction: row;
+}
+
+.tieng {
+    line-height: 1.8;
+    position: relative;
+    margin-left: 40px;
+}
+
+.tieng::before {
+    position: absolute;
+    content: '';
+    width: 50px;
+    height: 2px;
+    background-color: #199cdb;
+    border-radius: 50%;
+    left: 0px;
+    top: 30px;
+}
+
+.cach {
+    width: 50px;
+    height: 1px;
+    position: relative;
+    left: 60px;
+    top: -35px;
+}
+
+.bach::before {
+    position: absolute;
+    content: '';
+    width: 50px;
+    height: 2px;
+    background-color: gray;
+    border-radius: 50%;
+    left: 0px;
+    top: 30px;
+}
+
+.bach {
+    width: 50px;
+    height: 1px;
+    position: relative;
+    left: 80px;
+    top: -35px;
+}
+
+.chung::before {
+    position: absolute;
+    content: '';
+    width: 50px;
+    height: 2px;
+    background-color: gray;
+    border-radius: 50%;
+    left: 0px;
+    top: 30px;
+}
+
+.chung {
+    width: 50px;
+    height: 1px;
+    position: relative;
+    left: 60px;
+    top: -35px;
+}
+
+.kien::before {
+    position: absolute;
+    content: '';
+    width: 50px;
+    height: 2px;
+    background-color: gray;
+    border-radius: 50%;
+    left: 0px;
+    top: 30px;
+}
+
+.kien {
+    width: 50px;
+    height: 1px;
+    position: relative;
+    left: 80px;
+    top: -35px;
+}
+
+.personal-icon {
+    color: aqua;
+    margin-left: 30px;
+}
+
+.chungchi {
+    width: 100%;
+    height: 400px;
+    background-color: rgb(233, 232, 232);
+    margin: auto;
+    display: block;
+    padding: 30px 50px;
+}
+
+.images img {
+    width: 200px;
+    height: 100px;
+    margin: 20px -5px 0px 0px;
+    background-color: rgb(233, 232, 232);
+}
+
+.bo {
+
+    position: relative;
+    background-color: rgb(233, 232, 232);
+}
+
+.cc-content {
+    position: absolute;
+    font-size: 13px;
+    margin-left: 220px;
+    margin-top: -100px;
+
+}
+
+.cc-noidung {
+    position: absolute;
+    line-height: 1.8;
+    font-weight: unset;
+    color: gray;
+    font-size: 11px;
+    margin-left: 220px;
+    margin-top: -80px;
+}
+
+.ccc {
+    margin-left: 220px;
+}
+
+.img2 {
+
+    margin-left: 450px;
+    margin-top: -130px;
+}
+
+.cc {
+    margin-left: 670px;
+}
+
+.bb {
+    margin-left: 670px;
+}
+
+.img2 img {
+    border-left: 1px solid orange;
+    padding-left: 20px;
+}
+
+.border {
+    width: 900px;
+    height: 10px;
+    margin-top: 20px;
+    border-top: 1px solid orange;
+}
+
+
+.duan img {
+    width: 300px;
+    height: 300px;
+}
+
+.part-one {
+
+    margin-left: 350px;
+    margin-top: -580px;
+}
+
+.part-two {
+    margin-left: 350px;
+
+}
+
+.part-three {
+
+    margin-left: 690px;
+    margin-top: -575px;
+}
+
+.part-four {
+    margin-left: 690px;
+}
+
+.duan-work {
+    border: 1px solid gray;
+    width: 300px;
+    height: 30px;
+}
+
+.duan-work h4 {
+    font-size: 14px;
+    color: gray;
+    margin-top: 5px;
+    margin-left: 10px;
+
+}
+
+.duan-line p {
+    margin-top: 5px;
+    margin-left: 10px;
+}
+
+.duan-line {
+    border: 1px solid gray;
+
+    width: 300px;
+
+    height: 30px;
+    font-size: 9px;
+    color: gray;
+}
+
+.duan-two {
+    width: 300px;
+    height: 90px;
+    border: 1px solid gray;
+    color: gray;
+}
+
+.duan-two h5 {
+    font-size: 10px;
+    margin-top: 5px;
+    margin-left: 5px;
+}
+
+.duan-two p {
+    font-size: 13px;
+    margin-top: -15px;
+    margin-left: 40px;
+}
+
+.duan-three {
+    width: 300px;
+    height: 70px;
+    border: 1px solid gray;
+    color: gray;
+}
+
+.duan-three h5 {
+    font-size: 10px;
+    margin-top: 5px;
+    margin-left: 5px;
+}
+
+.duan-three p {
+    font-size: 13px;
+    margin-top: -15px;
+    margin-left: 60px;
+}
+
+.duan-four {
+    width: 300px;
+    height: 50px;
+    border: 1px solid gray;
+    color: gray;
+}
+
+.duan-four h5 {
+    font-size: 10px;
+    margin-top: 5px;
+    margin-left: 5px;
+}
+
+.duan-four p {
+    font-size: 13px;
+    margin-top: -15px;
+    margin-left: 60px;
+}
+
+/* Mobile */
+@media only screen and (max-width:767px) {
+    .container {
+        width: 768px;
+        margin: auto;
+        display: block;
+        padding: 30px 50px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    #banner {
+        padding: 50px 50px 200px 50px;
+
+        color: white;
+        background-image: url(images/emyeu.jpg);
+        width: 700px;
+        height: 200px;
+    }
+
+    #banner h1,
+    span {
+        margin-left: -350px;
+    }
+
+    #nav-bar .container {
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+    }
+
+    #about .container,
+    #job-info .container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #job-info {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .bg-grey {
+        display: flex;
+        flex-direction: column;
+        width: 500px;
+        height: 700px;
+    }
+
+    #nav-bar {
+        margin-left: -300px;
+    }
+
+    .mt-40 {
+        margin-left: 350px;
+    }
+
+    .section-title {
+        margin-bottom: 380px;
+    }
+
+    .images img {
+        position: absolute;
+        width: 200px;
+        height: 100px;
+        margin-top: -250px;
+        margin-left: -30px;
+        background-color: rgb(233, 232, 232);
+    }
+
+    .bo {
+
+        position: relative;
+        background-color: rgb(233, 232, 232);
+    }
+
+    .cc-content {
+        position: absolute;
+        font-size: 13px;
+        margin-left: 180px;
+        margin-top: -250px;
+
+    }
+
+    .cc-noidung {
+        position: absolute;
+        line-height: 1.8;
+        font-weight: unset;
+        color: gray;
+        font-size: 11px;
+        margin-left: 180px;
+        margin-top: -230px;
+    }
+
+    .img2 {
+
+        margin-left: -10px;
+        margin-top: -100px;
+    }
+
+    .cc {
+        margin-left: 180px;
+        margin-top: -80px;
+    }
+
+    .bb {
+        margin-left: 180px;
+        margin-top: -60px;
+    }
+
+    .img2 img {
+        margin-top: -80px;
+        padding-left: 20px;
+    }
+
+    .img3 img {
+        width: 190px;
+        height: 100px;
+        margin-top: -80px;
+
+    }
+
+    .ccc {
+        margin-top: -80px;
+    }
+
+    .cccc {
+        margin-top: -60px;
+    }
+
+    .img3 {
+        width: 100px;
+        margin-top: 150px;
+        margin-left: -10px;
+    }
+
+    #project {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+
+    .duan img {
+        width: 300px;
+        height: 300px;
+
+    }
+
+    .part-one {
+
+        margin-left: 0px;
+        margin-top: 20px;
+    }
+
+    .part-two {
+        margin-left: 0px;
+
+    }
+
+    .part-three {
+
+        margin-left: 0px;
+        margin-top: 5px;
+    }
+
+    .part-four {
+        margin-left: 0px;
+    }
+
+    .duan-work {
+        border: 1px solid gray;
+        width: 300px;
+        height: 30px;
+    }
+
+    .duan-work h4 {
+        font-size: 14px;
+        color: gray;
+        margin-top: 5px;
+        margin-left: 10px;
+
+    }
+
+
+
+    .duan-line {
+        border: 1px solid gray;
+        width: 300px;
+        height: 30px;
+        font-size: 9px;
+        color: gray;
+    }
+
+    .duan-line p {
+        margin-left: 370px;
+    }
+
+    .duan-two {
+        width: 300px;
+        height: 90px;
+        border: 1px solid gray;
+        color: gray;
+    }
+
+    .duan-two h5 {
+        font-size: 10px;
+        margin-top: 5px;
+        margin-left: 5px;
+    }
+
+    .duan-two p {
+        font-size: 13px;
+        margin-top: -15px;
+        margin-left: 40px;
+    }
+
+    .duan-three {
+        width: 300px;
+        height: 70px;
+        border: 1px solid gray;
+        color: gray;
+    }
+
+    .duan-three h5 {
+        font-size: 10px;
+        margin-top: 5px;
+        margin-left: 5px;
+    }
+
+    .duan-three p {
+        font-size: 13px;
+        margin-top: -15px;
+        margin-left: 60px;
+    }
+
+    .duan-four {
+        width: 300px;
+        height: 50px;
+        border: 1px solid gray;
+        color: gray;
+    }
+
+    .duan-four h5 {
+        font-size: 10px;
+        margin-top: 5px;
+        margin-left: 5px;
+    }
+
+    .duan-four p {
+        font-size: 13px;
+        margin-top: -15px;
+        margin-left: 60px;
+    }
+
+    .container1 ul {
+        width: 100%;
+        height: 120px;
+        background-color: rgb(190, 190, 189);
+        display: flex;
+        flex-direction: column;
+        margin-left: -50px;
+    }
+
+    .linked {
+        margin-left: -10px;
+    }
+
+    .github {
+        margin-left: -20px;
+    }
+
+    /*sử dụng flex basis 10% theo chiều rộng và ngang của nội dung */
+    .container1 li {
+        list-style-type: none;
+        font-size: 12px;
+        color: gray;
+        flex-basis: 12%;
+
+    }
+
+    .fb {
+        margin-left: 0px;
+    }
+
+    .mt-40 {
+        margin-top: -360px;
+    }
+
+
+}
+
+/* Tablet*/
+
+@media only screen and (min-width:780px) and(max-width:991px) {
+    section>.container {
+        width: 990px;
+        margin: auto;
+        display: block;
+        padding: 30px 50px;
+    }
+    
+    
+    #nav-bar .container {
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        margin-left: -200px;
+    }
+    #about .container{
+        margin-left: -50px;
+    }
+
+    .row2{
+        margin-top: -200px;
+    }
+
+    #target,
+    #personal-info {
+        width: 44.4%;
+        padding: 30px 0px;
+        margin-left: -150px;
+    }
+
+    .container1 ul {
+        width: 100%;
+        height: 100px;
+        background-color: rgb(190, 190, 189);
+        display: flex;
+    
+    }
+    
+    /*sử dụng flex basis 10% theo chiều rộng và ngang của nội dung */
+    .container1 li {
+        list-style-type: none;
+        font-size: 12px;
+        color: gray;
+        flex-basis: 10%;
+        align-self: center;
+    }
+    
+    .fb {
+        margin-left: 500px;
+    }
+
+    .column {
+        width: calc(50% - 50px);
+        margin: 0px 10px;
+        display: flex;
+        align-items: flex-start;
+        flex-wrap: wrap;
+        height: fit-content;
+    }
+    
+    .column-item {
+        width: 50%;
+        border: 1px solid #d0d0d0;
+        box-shadow: 1px 1px 5px #d0d0d0;
+        padding: 20px 0;
+        margin: 20px 0px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    
+    .column-item h1 {
+        width: 75%;
+        padding: 0 40px;
+    }
+    
+    .column-item i {
+        width: 25%;
+        text-align: center;
+        font-size: 36px;
+        color: gray;
+    }
+    
+
+}
